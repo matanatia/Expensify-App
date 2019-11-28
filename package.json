@@ -1,5 +1,5 @@
 {
-  "name": "expensify-app",
+  "name": "expensify",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -10,8 +10,11 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "create-react-component": "react-cli crc",
+    "create-react-component-f": "react-cli crfc",
+    "create-rn-component": "react-cli crnc",
+    "create-rn-component-f": "react-cli crnfc"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -27,5 +30,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "react-cli": "git+https://github.com/matanatia/react-cli.git"
   }
 }
