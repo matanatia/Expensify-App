@@ -3,7 +3,7 @@ import './Header.css';
 
 const Header = ({title}) => {
 
- const [error, setTitle] = useState(false);
+ const [error, setError] = useState(false);
 
  useEffect(() => {});
 
