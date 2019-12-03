@@ -1,16 +1,16 @@
 import React, { useState, useEffect} from 'react';
 import './Header.css';
 
-const Header = () => {
+const Header = ({title}) => {
 
- const [title, setTitle] = useState("Header component work");
+ const [error, setTitle] = useState(false);
 
  useEffect(() => {});
 
   return (
-    <div className='Header'>
-      { title }!!
-    </div>
+    <header className='Header'>
+      <h1>{ title }</h1>
+    </header>
    );
 }
 
