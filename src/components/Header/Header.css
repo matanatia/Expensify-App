@@ -1,5 +1,5 @@
 .Header {
-  background: rgb(51, 48, 48);
+  background: var(--grey-brown);
   display: flex;
   padding: 1rem;
   margin-bottom: 10rem;
@@ -7,26 +7,72 @@
 }
 
 h1 {
-  margin: 0 10rem ;
+  margin: 0 2rem;
   color: white;
 }
 
 .links {
-  width: 35%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 }
 
 .link {
+  margin: 0 1.2rem;
   color: white;
-  text-decoration:none;
-  transition: all .25s;
+  text-decoration: none;
+  transition: transform 0.25s;
   font-weight: bold;
 }
 
-.link:hover {
+.link:hover:not(.active-link) {
   transform: scale(1.15);
   cursor: pointer;
+}
+
+.active-link {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  height: 100%;
+  transform: scale(1.15);
+  background: white;
+  color: var(--grey-brown);
+  border-radius: 1rem;
+}
+
+/*  */
+@media only screen and (max-width: 800px) {
+  h1 {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .active-link {
+    padding: 0.8rem;
+  }
+
+  .link {
+    font-size: 1.5rem;
+  }
+  .links {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  h1 {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .active-link {
+    padding: 0.8rem;
+  }
+
+  .link {
+    font-size: 1.2rem;
+  }
 }

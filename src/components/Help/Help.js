@@ -1,21 +1,14 @@
-import React, { useState, useEffect} from 'react';
-import './Help.css';
+import React, { useState, useEffect } from "react";
+import "./Help.css";
 
-const Help = () => {
+const Help = props => {
+  const [title, setTitle] = useState("Help component work");
 
- const [title, setTitle] = useState("Help component work");
+  useEffect(() => {});
 
- useEffect(() => {});
-
-  return (
-    <div className='Help'>
-      { title }!!
-    </div>
-   );
-}
-
-Help.defaultProps = {
-
+  return <div className="Help">{title}!!</div>;
 };
+
+Help.defaultProps = {};
 
 export default Help;

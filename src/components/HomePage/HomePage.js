@@ -1,21 +1,14 @@
-import React, { useState, useEffect} from 'react';
-import './HomePage.css';
+import React, { useState, useEffect } from "react";
+import "./HomePage.css";
 
-const HomePage = () => {
+const HomePage = props => {
+  const [title, setTitle] = useState("HomePage component work");
 
- const [title, setTitle] = useState("HomePage component work");
+  useEffect(() => {});
 
- useEffect(() => {});
-
-  return (
-    <div className='HomePage'>
-      { title }!!
-    </div>
-   );
-}
-
-HomePage.defaultProps = {
-
+  return <div className="HomePage">{title}!!</div>;
 };
+
+HomePage.defaultProps = {};
 
 export default HomePage;

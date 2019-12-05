@@ -1,21 +1,18 @@
-import React, { useState, useEffect} from 'react';
-import './Edit.css';
+import React, { useState, useEffect } from "react";
+import "./Edit.css";
 
-const Edit = () => {
+const Edit = props => {
+  const [error, isError] = useState(false);
 
- const [title, setTitle] = useState("Edit component work");
-
- useEffect(() => {});
+  useEffect(() => {});
 
   return (
-    <div className='Edit'>
-      { title }!!
+    <div className="Edit">
+      Editing the expanse wite the id of {props.match.params.id}!!
     </div>
-   );
-}
-
-Edit.defaultProps = {
-
+  );
 };
+
+Edit.defaultProps = {};
 
 export default Edit;

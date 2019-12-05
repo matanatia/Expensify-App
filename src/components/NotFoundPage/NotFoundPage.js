@@ -1,22 +1,19 @@
-import React, { useState, useEffect} from 'react';
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import './NotFoundPage.css';
+import "./NotFoundPage.css";
 
-const NotFoundPage = () => {
+const NotFoundPage = props => {
+  const [title, setTitle] = useState("404!");
 
- const [title, setTitle] = useState("404!");
-
- useEffect(() => {});
+  useEffect(() => {});
 
   return (
-    <div className='NotFoundPage'>
-      { title }!! - <Link to="/">Go Home</Link>
+    <div className="NotFoundPage">
+      {title}!! - <Link to="/">Go Home</Link>
     </div>
-   );
-}
-
-NotFoundPage.defaultProps = {
-
+  );
 };
+
+NotFoundPage.defaultProps = {};
 
 export default NotFoundPage;

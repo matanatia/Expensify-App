@@ -1,21 +1,14 @@
-import React, { useState, useEffect} from 'react';
-import './Create.css';
+import React, { useState, useEffect } from "react";
+import "./Create.css";
 
-const Create = () => {
+const Create = props => {
+  const [title, setTitle] = useState("Create component work");
 
- const [title, setTitle] = useState("Create component work");
+  useEffect(() => {});
 
- useEffect(() => {});
-
-  return (
-    <div className='Create'>
-      { title }!!
-    </div>
-   );
-}
-
-Create.defaultProps = {
-
+  return <div className="Create">{title}!!</div>;
 };
+
+Create.defaultProps = {};
 
 export default Create;
