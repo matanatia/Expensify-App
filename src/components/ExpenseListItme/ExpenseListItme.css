@@ -1,0 +1,34 @@
+.ExpenseListItme {
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.ExpenseListItme:nth-child(even) {
+  background: var(--greyish-green);
+  color: white;
+}
+
+h3 {
+  width: 25%;
+  text-align: left;
+}
+
+.ExpenseListItme > .trashContainer:hover {
+  cursor: pointer;
+  animation: waver 0.7s;
+}
+
+@keyframes waver {
+  25% {
+    transform: rotate(20deg);
+  }
+  50% {
+    transform: rotate(-40deg);
+  }
+  100% {
+    transform: rotate(20);
+  }
+}

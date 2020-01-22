@@ -13,14 +13,16 @@ import NotFoundPage from "../components/NotFoundPage/NotFoundPage";
 const AppRouter = () => (
   <BrowserRouter>
     <Header title="Expensify" />
-    <Switch>
-      <Route path="/" component={HomePage} exact={true} />
-      <Route path="/create" component={Create} />
-      <Route path="/edit/:id" component={Edit} />
-      <Route path="/help" component={Help} />
-      {/* if page dosn't found */}
-      <Route component={NotFoundPage} />
-    </Switch>
+    <div style={{ flex: 1, paddingTop: "15rem" }}>
+      <Switch>
+        <Route path="/" component={HomePage} exact={true} />
+        <Route path="/create" component={Create} />
+        <Route path="/edit/:id" component={Edit} />
+        <Route path="/help" component={Help} />
+        {/* if page dosn't found */}
+        <Route component={NotFoundPage} />
+      </Switch>
+    </div>
     <Footer />
   </BrowserRouter>
 );

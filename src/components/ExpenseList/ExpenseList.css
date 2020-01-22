@@ -1,0 +1,10 @@
+.ExpenseList {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.ExpenseList > h1 {
+  color: var(--greyish-green);
+}

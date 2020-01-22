@@ -1,14 +1,17 @@
 import React, { useState, useEffect } from "react";
+//developed
+import ExpenseList from "../ExpenseList/ExpenseList";
+import SearchExpenseList from "../SearchExpenseList/SearchExpenseList";
+//style
 import "./HomePage.css";
 
 const HomePage = props => {
-  const [title, setTitle] = useState("HomePage component work");
-
-  useEffect(() => {});
-
-  return <div className="HomePage">{title}!!</div>;
+  return (
+    <div>
+      <SearchExpenseList />
+      <ExpenseList />
+    </div>
+  );
 };
-
-HomePage.defaultProps = {};
 
 export default HomePage;

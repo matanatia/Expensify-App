@@ -4,10 +4,6 @@ import { Link, NavLink } from "react-router-dom";
 import "./Header.css";
 
 const Header = ({ title }) => {
-  const [error, setError] = useState(false);
-
-  useEffect(() => {});
-
   return (
     <header className="Header">
       <h1>{title}</h1>
@@ -30,7 +26,5 @@ const Header = ({ title }) => {
     </header>
   );
 };
-
-Header.defaultProps = {};
 
 export default Header;

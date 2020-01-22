@@ -4,11 +4,7 @@ import "./Help.css";
 const Help = props => {
   const [title, setTitle] = useState("Help component work");
 
-  useEffect(() => {});
-
   return <div className="Help">{title}!!</div>;
 };
-
-Help.defaultProps = {};
 
 export default Help;

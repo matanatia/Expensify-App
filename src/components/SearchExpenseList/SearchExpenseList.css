@@ -1,0 +1,17 @@
+.SearchExpenseList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.SearchExpenseList > input {
+  outline: none;
+  width: 50%;
+  height: 2rem;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  color: var(--greyish-green);
+  font-weight: bolder;
+  border: none;
+  margin-right: 1rem;
+}
