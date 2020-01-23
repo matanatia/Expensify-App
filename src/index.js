@@ -15,7 +15,10 @@ const store = configureStore();
 
 //##################################################################
 store.dispatch(addExpense({ description: "udemy bill", amount: 50 }));
-store.dispatch(addExpense({ description: "ebay bill", amount: 100 }));
+store.dispatch(
+  addExpense({ description: "ebay bill", createdAt: 100, amount: 100 })
+);
+store.dispatch(addExpense({ description: "rent bill", amount: 1150 }));
 //##################################################################
 
 ReactDOM.render(

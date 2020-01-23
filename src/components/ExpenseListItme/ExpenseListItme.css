@@ -16,6 +16,10 @@ h3 {
   text-align: left;
 }
 
+p {
+  width: 25%;
+  text-align: center;
+}
 .ExpenseListItme > .trashContainer:hover {
   cursor: pointer;
   animation: waver 0.7s;

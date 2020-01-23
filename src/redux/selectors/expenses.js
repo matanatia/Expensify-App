@@ -7,12 +7,12 @@ export const getVisibleExpenses = (
       //note, amount
       const { description, createdAt } = expense;
       const startDateMatch =
-        typeof startDate === "number" &&
-        typeof createdAt === "number" &&
+        typeof startDate !== "number" ||
+        typeof createdAt !== "number" ||
         createdAt >= startDate;
       const endDateMatch =
-        typeof endDate === "number" &&
-        typeof createdAt === "number" &&
+        typeof endDate !== "number" ||
+        typeof createdAt !== "number" ||
         createdAt <= endDate;
       const textMatch =
         typeof text === "string" &&
