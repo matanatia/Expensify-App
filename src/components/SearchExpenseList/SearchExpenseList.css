@@ -13,5 +13,17 @@
   color: var(--greyish-green);
   font-weight: bolder;
   border: none;
-  margin-right: 1rem;
+  margin: 0 1rem;
+}
+
+select {
+  background-color: white;
+  color: var(--greyish-green);
+  border: none;
+  height: 4rem;
+}
+
+option {
+  background-color: teal;
+  color: red;
 }
