@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./Create.css";
 
 const Create = props => {
-  const [title, setTitle] = useState("Create component work");
+  const title = "Create component work";
 
   return <div className="Create">{title}!!</div>;
 };

@@ -1,11 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import "./NotFoundPage.css";
 
 const NotFoundPage = props => {
-  const [title, setTitle] = useState("404!");
-
-  useEffect(() => {});
+  const title = "404!";
 
   return (
     <div className="NotFoundPage">

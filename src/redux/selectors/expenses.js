@@ -4,7 +4,8 @@ export const getVisibleExpenses = (
 ) => {
   return expenses
     .filter(expense => {
-      const { description, note, amount, createdAt } = expense;
+      //note, amount
+      const { description, createdAt } = expense;
       const startDateMatch =
         typeof startDate === "number" &&
         typeof createdAt === "number" &&
@@ -28,5 +29,8 @@ export const getVisibleExpenses = (
       } else if (sortBy === "amount") {
         return a.amount < b.amount ? 1 : -1;
       }
+
+      //defult
+      return 1;
     });
 };

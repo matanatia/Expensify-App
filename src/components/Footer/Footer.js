@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./Footer.css";
 
 const Footer = props => {
-  const [title, setTitle] = useState("Footer component work");
+  const title = "Footer component work";
 
   return <div className="Footer">{title}!!</div>;
 };

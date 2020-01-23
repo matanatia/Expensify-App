@@ -2,7 +2,6 @@
 import { createStore, combineReducers } from "redux";
 //developed
 import expensesReducer from "../reducers/expenses";
-import { getVisibleExpenses } from "../selectors/expenses";
 import filtersReducer from "../reducers/filters";
 
 export default () => {
