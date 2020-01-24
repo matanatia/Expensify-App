@@ -22,8 +22,3 @@ select {
   border: none;
   height: 4rem;
 }
-
-option {
-  background-color: teal;
-  color: red;
-}
