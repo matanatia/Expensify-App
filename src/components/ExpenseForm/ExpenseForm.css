@@ -1,0 +1,49 @@
+.ExpenseForm {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+form {
+  display: flex;
+  height: 30rem;
+  width: 50%;
+  flex-direction: column;
+  align-items: center;
+}
+
+form > input,
+form > textarea {
+  width: 100%;
+  border: none;
+  padding: 1rem;
+  color: var(--greyish-green);
+  margin: 1rem;
+  border-radius: 0.5rem;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--greyish-green);
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: var(--greyish-green);
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: var(--greyish-green);
+}
+
+textarea {
+  height: 20rem;
+}
+
+@media only screen and (max-width: 900px) {
+  form {
+    width: 70%;
+  }
+}
