@@ -42,6 +42,20 @@ textarea {
   height: 20rem;
 }
 
+button {
+  border: none;
+  color: white;
+  background: var(--greyish-green);
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+button:hover {
+  cursor: pointer;
+  position: relative;
+  top: -0.2rem;
+}
+
 @media only screen and (max-width: 900px) {
   form {
     width: 70%;
