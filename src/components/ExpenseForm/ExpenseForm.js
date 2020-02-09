@@ -1,4 +1,10 @@
 import React, { useState } from "react";
+//third party
+import moment from "moment";
+import { SingleDatePicker } from "react-dates";
+import "react-dates/initialize";
+//style
+import "react-dates/lib/css/_datepicker.css";
 import "./ExpenseForm.css";
 
 const ExpenseForm = props => {
@@ -6,6 +12,8 @@ const ExpenseForm = props => {
   const [description, setDescription] = useState("");
   const [amount, setAmount] = useState("");
   const [note, setNote] = useState("");
+  const [createdAt, setCreatedAt] = useState(moment());
+  const [calanderFocused, setCalanderFocused] = useState(false);
 
   const onDescriptionChange = e => {
     setDescription(e.target.value);
@@ -20,6 +28,14 @@ const ExpenseForm = props => {
     if (amount.match(/^\d*(\.\d{0,2})?$/)) {
       setAmount(amount);
     }
+  };
+
+  const onDateChange = createdAt => {
+    setCreatedAt(createdAt);
+  };
+
+  const onFocusChange = ({ focused }) => {
+    setCalanderFocused(focused);
   };
 
   return (
@@ -42,6 +58,15 @@ const ExpenseForm = props => {
           placeholder="Add a note for your expense (optional)"
           value={note}
           onChange={onNoteChange}
+        />
+        <SingleDatePicker
+          date={createdAt}
+          onDateChange={onDateChange}
+          focused={calanderFocused}
+          onFocusChange={onFocusChange}
+          numberOfMonths={1}
+          isOutsideRange={day => false}
+          id={createdAt.format()}
         />
         <button>Add Expense</button>
       </form>
