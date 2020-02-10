@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { withRouter } from "react-router-dom";
 import moment from "moment";
 import { SingleDatePicker } from "react-dates";
+import { ANCHOR_RIGHT, OPEN_UP } from "react-dates/constants";
 import "react-dates/initialize";
 //developed
 import Modal from "../Modal/Modal";
@@ -85,11 +86,6 @@ const ExpenseForm = ({ onSubmit, history }) => {
             value={amount}
             onChange={onAmountChange}
           />
-          <textarea
-            placeholder="Add a note for your expense (optional)"
-            value={note}
-            onChange={onNoteChange}
-          />
 
           <SingleDatePicker
             date={createdAt}
@@ -99,6 +95,14 @@ const ExpenseForm = ({ onSubmit, history }) => {
             numberOfMonths={1}
             isOutsideRange={day => false}
             id={createdAt.format()}
+            anchorDirection={ANCHOR_RIGHT}
+            //openDirection={OPEN_UP}
+          />
+
+          <textarea
+            placeholder="Add a note for your expense (optional)"
+            value={note}
+            onChange={onNoteChange}
           />
 
           <button style={{ marginTop: "1rem" }}>Add Expense</button>

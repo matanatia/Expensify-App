@@ -6,7 +6,7 @@ import "./Header.css";
 const Header = ({ title }) => {
   return (
     <header className="Header">
-      <h1>{title}</h1>
+      <h1 style={{ color: "white" }}>{title}</h1>
       <div className="links">
         <NavLink
           to="/"

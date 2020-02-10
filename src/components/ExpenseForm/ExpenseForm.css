@@ -38,6 +38,29 @@ form > textarea {
   color: var(--greyish-green);
 }
 
+.CalendarDay,
+.CalendarMonth_caption {
+  color: var(--greyish-green);
+}
+
+.CalendarDay.CalendarDay__selected {
+  color: white;
+}
+
+.SingleDatePickerInput.SingleDatePickerInput_1.SingleDatePickerInput__withBorder.SingleDatePickerInput__withBorder_2 {
+  border: none;
+}
+
+div.SingleDatePicker_picker.SingleDatePicker_picker_1.SingleDatePicker_picker__directionLeft.SingleDatePicker_picker__directionLeft_2 {
+  left: -10rem;
+}
+
+.DateInput_input.DateInput_input_1 {
+  width: 10rem;
+  font-weight: 300;
+  color: var(--greyish-green);
+}
+
 textarea {
   height: 30rem;
 }
