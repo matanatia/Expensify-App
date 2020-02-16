@@ -12,18 +12,21 @@ const Edit = props => {
     props.dispatch(editExpense(props.match.params.id, expense));
   };
 
-  const { data } = props.location.state;
-
   return (
     <div className="Edit">
       <h1>Edit Expense</h1>
       <ExpenseForm
         onSubmit={onSubmit}
         btnTitle="Save Changes"
-        expenseData={data}
+        expenseData={props.expenseData}
       />
     </div>
   );
 };
 
-export default connect()(Edit);
+const mapToProps = (state, props) => {
+  return {
+    expenseData: state.expenses.find(({ id }) => id === props.match.params.id)
+  };
+};
+export default connect(mapToProps)(Edit);

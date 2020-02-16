@@ -18,11 +18,7 @@ const ExpenseListItme = ({
   history
 }) => {
   const onRemoveExpense = () => dispatch(removeExpense({ id }));
-  const onEditExpense = () =>
-    history &&
-    history.push(`/edit/${id}`, {
-      data: { description, amount, createdAt, note }
-    });
+  const onEditExpense = () => history && history.push(`/edit/${id}`);
 
   return (
     <div className="ExpenseListItme">
