@@ -1,5 +1,3 @@
-import { getVisibleExpenses } from "../selectors/expenses";
-
 //expense reducer
 const defaultState = [];
 

@@ -3,3 +3,38 @@
   justify-content: center;
   align-items: center;
 }
+
+.iconContainer_clear {
+  color: var(--greyish-green);
+  margin: 0 1rem;
+  transition: all 0.25s;
+}
+
+.iconContainer_clear:hover {
+  cursor: pointer;
+  transform: scale(1.5);
+  font-weight: bolder;
+}
+
+.CalendarDay,
+.CalendarMonth_caption {
+  color: var(--greyish-green);
+}
+
+.CalendarDay.CalendarDay__selected {
+  color: white;
+}
+
+.DateRangePickerInput.DateRangePickerInput_1.DateRangePickerInput__withBorder.DateRangePickerInput__withBorder_2 {
+  border: none;
+}
+
+div.DateRangePicker_picker.DateRangePicker_picker_1.DateRangePicker_picker__directionLeft.DateRangePicker_picker__directionLeft_2 {
+  left: -10rem;
+}
+
+.DateInput_input.DateInput_input_1 {
+  width: 10rem;
+  font-weight: 300;
+  color: var(--greyish-green);
+}

@@ -4,3 +4,9 @@
   flex-direction: column;
   height: 100%;
 }
+
+.Edit > h1 {
+  margin: 0;
+  margin-bottom: 1rem;
+  color: var(--greyish-green);
+}

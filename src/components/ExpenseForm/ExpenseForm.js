@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { withRouter } from "react-router-dom";
 import moment from "moment";
 import { SingleDatePicker } from "react-dates";
-import { ANCHOR_RIGHT, OPEN_UP } from "react-dates/constants";
+import { ANCHOR_RIGHT } from "react-dates/constants";
 import "react-dates/initialize";
 //developed
 import Modal from "../Modal/Modal";

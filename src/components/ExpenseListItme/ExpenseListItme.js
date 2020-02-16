@@ -24,10 +24,10 @@ const ExpenseListItme = ({
       <h3>{description}</h3>
       <p>{amount}</p>
       <p>{moment(createdAt).calendar()}</p>
-      <div className={"trashContainer"} onClick={onRemoveExpense}>
+      <div className={"iconContainer"} onClick={onRemoveExpense}>
         <FaTrash size={"2rem"} />
       </div>
-      <div className={"trashContainer"} onClick={onEditExpense}>
+      <div className={"iconContainer"} onClick={onEditExpense}>
         <FaRegEdit size={"2rem"} />
       </div>
     </div>

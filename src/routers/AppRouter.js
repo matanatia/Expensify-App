@@ -13,7 +13,7 @@ import NotFoundPage from "../components/NotFoundPage/NotFoundPage";
 const AppRouter = () => (
   <BrowserRouter>
     <Header title="Expensify" />
-    <div style={{ flex: 1, paddingTop: "15rem" }}>
+    <div style={{ flex: 1, marginTop: "15rem" }}>
       <Switch>
         <Route path="/" component={HomePage} exact={true} />
         <Route path="/create" component={Create} />

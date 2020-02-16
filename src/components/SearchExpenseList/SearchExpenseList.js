@@ -31,7 +31,7 @@ const SearchExpenseList = props => {
 
   return (
     <div className="SearchExpenseList">
-      <select onChange={selectValueChange}>
+      <select onChange={selectValueChange} defaultValue={props.sortBy}>
         <option value="date">Date</option>
         <option value="amount">Amount</option>
       </select>
@@ -47,7 +47,8 @@ const SearchExpenseList = props => {
 
 const mapStateToProps = state => {
   return {
-    filters: state.filters
+    filters: state.filters,
+    sortBy: state.filters.sortBy
   };
 };
 
