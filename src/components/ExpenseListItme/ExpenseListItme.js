@@ -13,7 +13,6 @@ const ExpenseListItme = ({
   description,
   amount,
   createdAt,
-  note,
   dispatch,
   history
 }) => {
