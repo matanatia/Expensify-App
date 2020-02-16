@@ -1,7 +1,6 @@
 import React from "react";
 //third party
 import { connect } from "react-redux";
-
 //developed
 import ExpenseForm from "../ExpenseForm/ExpenseForm";
 import { addExpense } from "../../redux/actions/expenses";

@@ -11,12 +11,20 @@ import Modal from "../Modal/Modal";
 import "react-dates/lib/css/_datepicker.css";
 import "./ExpenseForm.css";
 
-const ExpenseForm = ({ onSubmit, history }) => {
+const ExpenseForm = ({ onSubmit, history, btnTitle, expenseData }) => {
   // Declare a new state variables
-  const [description, setDescription] = useState("");
-  const [amount, setAmount] = useState("");
-  const [note, setNote] = useState("");
-  const [createdAt, setCreatedAt] = useState(moment());
+  const [description, setDescription] = useState(
+    (expenseData && expenseData.description) || ""
+  );
+  const [amount, setAmount] = useState(
+    (expenseData && expenseData.amount) || ""
+  );
+  const [note, setNote] = useState((expenseData && expenseData.note) || "");
+  const [createdAt, setCreatedAt] = useState(
+    (expenseData && expenseData.createdAt && moment(expenseData.createdAt)) ||
+      moment()
+  );
+
   const [calanderFocused, setCalanderFocused] = useState(false);
   const modalMsg = "Please provide description and amount";
   const [showModal, setShowModal] = useState(false);
@@ -105,7 +113,9 @@ const ExpenseForm = ({ onSubmit, history }) => {
             onChange={onNoteChange}
           />
 
-          <button style={{ marginTop: "1rem" }}>Add Expense</button>
+          <button style={{ marginTop: "1rem" }}>
+            {btnTitle || "Add Expense"}
+          </button>
         </form>
       </div>
     </>
