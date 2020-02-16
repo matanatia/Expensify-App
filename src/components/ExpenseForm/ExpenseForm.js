@@ -14,15 +14,18 @@ import "./ExpenseForm.css";
 const ExpenseForm = ({ onSubmit, history, btnTitle, expenseData }) => {
   // Declare a new state variables
   const [description, setDescription] = useState(
-    (expenseData && expenseData.description) || ""
+    expenseData && expenseData.description ? expenseData.description : ""
   );
   const [amount, setAmount] = useState(
-    (expenseData && expenseData.amount) || ""
+    expenseData && expenseData.amount ? expenseData.amount : ""
   );
-  const [note, setNote] = useState((expenseData && expenseData.note) || "");
+  const [note, setNote] = useState(
+    expenseData && expenseData.note ? expenseData.note : ""
+  );
   const [createdAt, setCreatedAt] = useState(
-    (expenseData && expenseData.createdAt && moment(expenseData.createdAt)) ||
-      moment()
+    expenseData && expenseData.createdAt && moment(expenseData.createdAt)
+      ? moment(expenseData.createdAt)
+      : moment()
   );
 
   const [calanderFocused, setCalanderFocused] = useState(false);
