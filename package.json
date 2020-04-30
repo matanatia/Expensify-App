@@ -19,7 +19,8 @@
     "build": "react-scripts build",
     "eject": "react-scripts eject",
     "create-react-component": "react-cli crc",
-    "create-react-component-f": "react-cli crfc"
+    "create-react-component-f": "react-cli crfc",
+    "test": "jest --env=jsdom"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -37,6 +38,7 @@
     ]
   },
   "devDependencies": {
-    "react-cli": "git+https://github.com/matanatia/react-cli.git"
+    "react-cli": "git+https://github.com/matanatia/react-cli.git",
+    "react-test-renderer": "^16.13.0"
   }
 }
