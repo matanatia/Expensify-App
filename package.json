@@ -21,7 +21,7 @@
     "eject": "react-scripts eject",
     "create-react-component": "react-cli crc",
     "create-react-component-f": "react-cli crfc",
-    "test": "jest --env=jsdom"
+    "test": "jest --config=jest.config.json"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -39,6 +39,9 @@
     ]
   },
   "devDependencies": {
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "raf": "^3.4.1",
     "react-cli": "git+https://github.com/matanatia/react-cli.git",
     "react-test-renderer": "^16.13.1"
   }
