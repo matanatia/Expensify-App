@@ -21,13 +21,13 @@ const ExpenseListItme = ({
 
   return (
     <div className="ExpenseListItme">
-      <h3>{description}</h3>
+      <h3 style={{ marginLeft: '2rem' }}>{description}</h3>
       <p>{amount}</p>
       <p>{moment(createdAt).calendar()}</p>
       <div className={"iconContainer"} onClick={onRemoveExpense}>
         <FaTrash size={"2rem"} />
       </div>
-      <div className={"iconContainer"} onClick={onEditExpense}>
+      <div className={"iconContainer"} onClick={onEditExpense} style={{ marginRight: '2rem' }}>
         <FaRegEdit size={"2rem"} />
       </div>
     </div>
